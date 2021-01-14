@@ -1,5 +1,6 @@
 "use strict";
 
+const belle = document.querySelector(".belle");
 // Define functions
 let secretNumber;
 const randomNumber = function () {
@@ -29,6 +30,7 @@ document.querySelector(`.check`).addEventListener(`click`, function () {
 
     // When guess is correct
   } else if (guess === secretNumber) {
+    belle.classList.remove("hidden");
     displayMessage(`Correct!`);
     document.querySelector(`body`).style.backgroundColor = `#60b347`;
     document.querySelector(`.number`).style.width = `30rem`;
